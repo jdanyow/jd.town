@@ -1,0 +1,17 @@
+account_id = "188de0e46b727e418e3293eb98113d5c"
+main = "index.js"
+# https://developers.cloudflare.com/workers/platform/compatibility-dates/
+compatibility_date = "2024-09-02"
+workers_dev = false
+no_bundle = true
+minify = false
+node_compat = false
+keep_vars = false
+
+[observability]
+enabled = true
+head_sampling_rate = 1 # optional. default = 1.
+
+[env.production]
+name = "jd-town"
+route = { pattern = "jd.town", custom_domain = true }
